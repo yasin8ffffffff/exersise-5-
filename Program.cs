@@ -7,6 +7,7 @@ string input;
 ConsoleKeyInfo digit;
 do
 {
+    lockkeyboard();
    Scoretorank();
     YesorNo();
    
@@ -61,3 +62,24 @@ void YesorNo()
 
     } while (input.ToLower() != "y" && input.ToLower() != "n");
 }
+void lockkeyboard()
+
+{
+    do
+    {
+        digit = Console.ReadKey(true);
+
+    } while (digit.KeyChar.ToString() != "0" && digit.KeyChar.ToString() != "1" &&
+            digit.KeyChar.ToString() != "2" && digit.KeyChar.ToString() != "3" &&
+            digit.KeyChar.ToString() != "4" && digit.KeyChar.ToString() != "5" &&
+            digit.KeyChar.ToString() != "6" && digit.KeyChar.ToString() != "7" &&
+            digit.KeyChar.ToString() != "8" && digit.KeyChar.ToString() != "9" &&
+            digit.Key.ToString() != "Enter");
+}
+
+
+
+
+
+
+
